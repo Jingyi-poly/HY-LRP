@@ -1,4 +1,4 @@
-Stochastic LRP — 教授提交版
+Stochastic LRP 
 
 1. 内容
 src-ini/：三层 SDDP/SBC/Level Set 算法、物理路线 CG 加速、独立两阶段 EF。
