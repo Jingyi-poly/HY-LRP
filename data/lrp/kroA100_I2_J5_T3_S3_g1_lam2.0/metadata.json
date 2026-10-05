@@ -1,0 +1,112 @@
+{
+  "generator_version": "0.1.0",
+  "numpy_version": "2.3.5",
+  "paper": {
+    "authors": [
+      "Maria Albareda-Sambola",
+      "Elena Fernández",
+      "Stefan Nickel"
+    ],
+    "title": "Multiperiod Location-Routing with Decoupled Time Scales",
+    "year": 2012,
+    "doi": "10.1016/j.ejor.2011.09.022",
+    "section": "4, p. 253"
+  },
+  "original_author_instance": false,
+  "kind": "new_tsplib_derived_stochastic_validation",
+  "source": {
+    "name": "kroA100",
+    "sha256": "e103100c1cf31dfc06be95a9d04011b5a8753bb65a3339594ca34404e574bdf5",
+    "kind": "tsplib_local",
+    "path_supplied": "sources/kroA100.tsp"
+  },
+  "config": {
+    "id": "kroA100_I2_J5_T3_S3_g1_lam2.0",
+    "source": "sources/kroA100.tsp",
+    "source_kind": "tsplib_local",
+    "facilities": 2,
+    "customers": 5,
+    "periods": 3,
+    "location_periods": [
+      1,
+      3
+    ],
+    "seed": 20260920,
+    "geometry_rep": 1,
+    "demand_rep": 0,
+    "q": 0.8,
+    "setup_cv": 0.1,
+    "kind": "stochastic",
+    "scenarios": 3,
+    "activation": "bernoulli",
+    "cost_mode": "paper_affine",
+    "capacity_ratio": 1.2,
+    "demand_halfwidth": 0.5,
+    "outsource_multiplier": 2.0,
+    "min_open": 0
+  },
+  "dimensions": {
+    "I": 2,
+    "J": 5,
+    "T": 3,
+    "L": 2,
+    "S": 3
+  },
+  "model_flags": {
+    "stages": 2,
+    "information": "entire demand trajectory revealed after facility-plan commitment",
+    "allow_outsourcing": true,
+    "allow_idle": true,
+    "enforce_facility_capacity": true,
+    "state_semantics": "strict opening/continuation/closure",
+    "singleton_policy": "directed out-and-back",
+    "outsourcing": "whole-order processing+delivery; no own capacity or route",
+    "cross_period_recourse_coupling": false,
+    "cross_scenario_assignment_commitment": false,
+    "vehicles_per_facility_period": 1,
+    "additional_vehicle_capacity": false
+  },
+  "negative_normal_redraws": 0,
+  "scaling": {
+    "mode": "paper_affine",
+    "distance_min": 416.0,
+    "distance_max": 3254.0
+  },
+  "indexing": "arrays are 0-based; location_periods and physical node IDs retain 1-based labels",
+  "random_streams": "SHA256-derived PCG64; scenario-indexed activity and quantity streams; no Python hash()",
+  "new_conventions": [
+    "see README.md; not an exact regeneration of the original 135 instances"
+  ],
+  "metric_cut_permission": "not granted by family name; inspect triangle diagnostics on actual matrices",
+  "validation": {
+    "status": "passed",
+    "finite_nonnegative": true,
+    "disjoint_physical_nodes": true,
+    "full_scenario_weights_sum": 1.0,
+    "flat_period_scenario_weights_sum": 3.0,
+    "triangle_violating_local_matrices": 6,
+    "max_triangle_violation": 2.8090630440433646,
+    "empty_period_scenario_nodes": 0,
+    "all_outsourced_recourse_bound": [
+      [
+        681.3007505623995,
+        348.1301502803329,
+        462.38866797418115
+      ],
+      [
+        602.5211968196943,
+        847.1159408591602,
+        916.7037151786415
+      ],
+      [
+        928.8497929899287,
+        803.9704666309884,
+        951.4729189496101
+      ]
+    ],
+    "sample_demand_exceeds_all_facilities_capacity_nodes": 1,
+    "mandatory_dispatch_customer_shortage_periods": []
+  },
+  "name": "kroA100_I2_J5_T3_S3_g1_lam2.0",
+  "logical_sha256": "b0e4991a1b4f529810bea922fa6093f86d8098ec2f805e20c0ce82f50ff14194"
+}
